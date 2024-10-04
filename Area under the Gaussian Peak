@@ -1,0 +1,13 @@
+% Define the Gaussian function 
+gaussian = @(x, A, mu, sigma) A * exp(-(x - mu).^2 / (2*sigma^2)); 
+% Generate some Exmaple Data
+x = linespace(  ;   ); 
+y = gaussian(   ;   ); 
+% Plot the Gaussian Peak
+plot(x, y) 
+xlabel('x') 
+ylabel('y') 
+title(' Gaussian Chromatographic Peak') 
+% Compute the area under the Gaussian Peak using the Trapeziodal Method 
+area = trapz(x, y); 
+fprintf(' Area Under the Gaussian Peak:%f\n', area);   
